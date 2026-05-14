@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi di Italiano A2</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 1.3em; }
+        h3 { color: #d35400; font-size: 1.1em; background: #fef5e7; padding: 8px; border-left: 4px solid #e67e22; }
+        .selector-box { background: #e8f4f8; padding: 15px; border-radius: 6px; margin-bottom: 20px; text-align: center; font-weight: bold; }
+        select { padding: 8px 15px; font-size: 16px; border-radius: 4px; border: 1px solid #bdc3c7; }
+        .unit-section { display: none; }
+        .unit-section.active { display: block; }
+        .exercise { margin-bottom: 25px; padding: 15px; border: 1px solid #ecf0f1; border-radius: 6px; background: #fafbfc; }
+        .line { margin-bottom: 12px; line-height: 1.6; }
+        input[type="text"] { padding: 4px 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; width: 140px; text-align: center; }
+        select.inline-select { padding: 4px; font-size: 14px; border-radius: 4px; }
+        .btn-correct { background-color: #27ae60; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 4px; cursor: pointer; display: block; margin: 20px 0; transition: 0.3s; }
+        .btn-correct:hover { background-color: #219653; }
+        .result-mark { font-weight: bold; margin-left: 10px; }
+        .correct { color: #27ae60; }
+        .incorrect { color: #c0392b; }
+        .score-display { font-weight: bold; margin-top: 10px; font-size: 1.1em; color: #2c3e50; }
+        .options-list { font-style: italic; color: #7f8c8d; margin-bottom: 10px; display: block; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Esercizi di Italiano (Livello A2)</h1>
+    
+    <div class="selector-box">
+        Seleziona Unità: 
+        <select id="unitSelector" onchange="switchUnit()">
+            <option value="1">Unità 1</option>
+            <option value="2">Unità 2</option>
+            <option value="3">Unità 3</option>
+            <option value="4">Unità 4</option>
+            <option value="5">Unità 5</option>
+        </select>
+    </div>
+
+    <!-- ================= UNITÀ 1 ================= -->
+    <div id="unit1" class="unit-section active">
+        <h2>Unità 1 - Passato Prossimo e Grammatica</h2>
+        
+        <div class="exercise" id="ex_1g">
+            <h3>1g. Completa i dialoghi con l'ausiliare essere o avere e la desinenza del participio passato.</h3>
+            <div class="line">1. Che cosa <input type="text" data-ans="avete"> fatt<input type="text" data-ans="o" style="width:40px"> (voi) domenica?</div>
+            <div class="line">&bull; <input type="text" data-ans="Siamo"> andat<input type="text" data-ans="i" style="width:40px"> a sciare all'Abetone.</div>
+            <div class="line">2. Ciao, Cristina! Da quanto tempo non ti vedo! <input type="text" data-ans="Sei"> stat<input type="text" data-ans="a" style="width:40px"> al mare?</div>
+            <div class="line">&bull; Sì, <input type="text" data-ans="sono"> partit<input type="text" data-ans="a" style="width:40px"> all'inizio di luglio e <input type="text" data-ans="sono"> tornat<input type="text" data-ans="a" style="width:40px"> ieri.</div>
+            <div class="line">3. Ciao, Marco. Ti <input type="text" data-ans="ho"> telefonat<input type="text" data-ans="o" style="width:40px"> ieri ma non mi <input type="text" data-ans="hai"> rispost<input type="text" data-ans="o" style="width:40px">.</div>
+            <div class="line">&bull; Ciao. Ieri <input type="text" data-ans="sono"> stat<input type="text" data-ans="o" style="width:40px"> a Milano con Anna. Scusa, <input type="text" data-ans="ho"> lasciat<input type="text" data-ans="o" style="width:40px"> a casa il telefonino!</div>
+            <div class="line">4. &bull; <input type="text" data-ans="Ho"> pers<input type="text" data-ans="o" style="width:40px"> il portafoglio! Dentro avevo 300 euro e tutti i documenti! Ma Anna, come <input type="text" data-ans="hai"> fatt<input type="text" data-ans="o" style="width:40px">?</div>
+            <div class="line">&bull; <input type="text" data-ans="Sono"> andat<input type="text" data-ans="a" style="width:40px"> al supermercato e <input type="text" data-ans="ho"> dimenticat<input type="text" data-ans="o" style="width:40px"> il portafoglio alla cassa.</div>
+            <div class="line">&bull; Devi tornare subito là. Corri!</div>
+            <div class="line">5. Perché Mara e Federica non <input type="text" data-ans="sono"> venut<input type="text" data-ans="e" style="width:40px"> in montagna ieri?</div>
+            <div class="line">&bull; Perché si <input type="text" data-ans="sono"> alzat<input type="text" data-ans="e" style="width:40px"> (loro) tardi e <input type="text" data-ans="hanno"> pers<input type="text" data-ans="o" style="width:40px"> il pullman.</div>
+            <div class="line">6. Quando <input type="text" data-ans="è"> nat<input type="text" data-ans="o" style="width:40px"> (lui)?</div>
+            <div class="line">&bull; <input type="text" data-ans="È"> nat<input type="text" data-ans="o" style="width:40px"> il 10 aprile.</div>
+            <button class="btn-correct" onclick="checkExercise('ex_1g')">Correggi Esercizio 1g</button>
+            <div class="score-display"></div>
+        </div>
+
+        <div class="exercise" id="ex_2c">
+            <h3>2c. Completa le frasi con il verbo al passato prossimo e un avverbio di tempo.</h3>
+            <div class="line">1. Parti tra due ore ma non <input type="text" data-ans="hai ancora preparato"> (tu, preparare) la valigia. Devi fare in fretta!</div>
+            <div class="line">2. <input type="text" data-ans="Siamo appena arrivati"> (arrivare) alla stazione, adesso cerchiamo un taxi e andiamo in albergo.</div>
+            <div class="line">3. Non <input type="text" data-ans="ho mai fatto"> (io, fare) una vacanza in moto perché ho troppa paura.</div>
+            <div class="line">4. Il prossimo fine settimana vorremmo andare a Roma, ma <input type="text" data-ans="non abbiamo ancora prenotato"> (noi, prenotare) l'aereo: speriamo di trovare posto!</div>
+            <div class="line">5. Vado in vacanza in Sicilia e <input type="text" data-ans="ho già comprato"> (comprare) i biglietti per il traghetto ma <input type="text" data-ans="non ho ancora trovato"> (trovare) un albergo.</div>
+            <div class="line">6. Ai miei genitori piacerebbe molto andare a Palermo: non <input type="text" data-ans="sono mai stati"> (loro, stare) in Sicilia.</div>
+            <button class="btn-correct" onclick="checkExercise('ex_2c')">Correggi Esercizio 2c</button>
+            <div class="score-display"></div>
+        </div>
+    </div>
+
+    <!-- ================= UNITÀ 2 ================= -->
+    <div id="unit2" class="unit-section">
+        <h2>Unità 2 - Pronomi e Futuro Semplice</h2>
+        
+        <div class="exercise" id="ex_7_u1">
+            <h3>7. Completa il dialogo con i pronomi diretti di 3ª persona (lo, la, li, le).</h3>
+            <div class="line">&bull; Sai dove sono le mie scarpe?</div>
+            <div class="line">&bull; (1) <input type="text" data-ans="Le"> ho messe io nella valigia.</div>
+            <div class="line">&bull; Non trovo più i miei occhiali da sole. (2) <input type="text" data-ans="Li"> hai visti, per caso?</div>
+            <div class="line">&bull; No, non (3) <input type="text" data-ans="li"> ho visti, ma ho visto la tua macchina fotografica sul letto.</div>
+            <div class="line">&bull; Ah grazie! (4) <input type="text" data-ans="La"> cerco da due ore! Chissà dov'è finito il mio passaporto. Non (5) <input type="text" data-ans="lo"> trovo più...</div>
+            <div class="line">&bull; Se cerchi i biglietti del treno, (6) <input type="text" data-ans="li"> ho messi nella mia borsa.</div>
+            <button class="btn-correct" onclick="checkExercise('ex_7_u1')">Correggi Esercizio 7</button>
+            <div class="score-display"></div>
+        </div>
+
+        <div class="exercise" id="ex_1d_u2">
+            <h3>1d. Completa le descrizioni con i pronomi indiretti (mi, ti, gli, le, ci, vi, loro).</h3>
+            <div class="line">1. Dunque, Giulia ha 13 anni e (1) <input type="text" data-ans="le"> piace tutto ciò che è alla moda. I suoi genitori (2) <input type="text" data-ans="le"> regaleranno un cellulare perché tutte le sue amiche ne hanno uno e si mandano sempre dei messaggini. Sono sicuro che quando anche lei ne avrà uno, (3) <input type="text" data-ans="ci"> manderà tantissimi messaggini. Io invece (4) <input type="text" data-ans="le"> prendo qualcosa di carino e originale, per esempio (5) <input type="text" data-ans="le"> piacciono molto tutti gli accessori per l'abbigliamento.</div>
+            <div class="line">2. Luca ha 21 anni e studia all'università. (6) <input type="text" data-ans="Gli"> ho chiesto un consiglio ma mi ha detto: "Regalami quello que vuoi!". È molto impegnato all'università, la zia (7) <input type="text" data-ans="gli"> ha appena comprato una stampante nuova. Magari (8) <input type="text" data-ans="gli"> compro qualcosa per il computer.</div>
+            <div class="line">3. E ai miei genitori? Che cosa (9) <input type="text" data-ans="gli"> posso comprare? Per mia mamma? (10) <input type="text" data-ans="Le"> piacciono molto tutti gli articoli di profumeria, che non (11) <input type="text" data-ans="le"> bastano mai!</div>
+            <div class="line">4. E per papà? (12) <input type="text" data-ans="Gli"> piace molto lavorare in giardino, ma quando suona il telefono deve sempre fare le scale di corsa! Ho capito che cosa (13) <input type="text" data-ans="gli"> posso regalare.</div>
+            <button class="btn-correct" onclick="checkExercise('ex_1d_u2')">Correggi Esercizio 1d</button>
+            <div class="score-display"></div>
+        </div>
+
+        <div class="exercise" id="ex_1f_u2">
+            <h3>1f. Completa le frasi con i verbi al futuro.</h3>
+            <div class="line">1. Penso que <input type="text" data-ans="comprerò"> (io, comprare) le nuove tende al mercato.</div>
+            <div class="line">2. Giovedì 23 maggio <input type="text" data-ans="mancherà"> (mancare) la corrente per un'ora, dalle 11 alle 12.</div>
+            <div class="line">3. Giurami che non <input type="text" data-ans="inviterai"> (tu, invitare) più i tuoi amici a casa nostra senza il mio permesso!</div>
+            <div class="line">4. Se compriamo una casa più grande, ti prometto che ti <input type="text" data-ans="aiuterò"> (aiutare) a pulirla.</div>
+            <div class="line">5. Se <input type="text" data-ans="farà"> (fare) bello, <input type="text" data-ans="passeremo"> (noi, passare) il Ferragosto nella casa di montagna.</div>
+            <div class="line">6. Le prometto che <input type="text" data-ans="verrò"> (venire) domani a riparare la lavastoviglie.</div>
+            <div class="line">7. <input type="text" data-ans="Ci saranno"> (esserci) delle novità in amore. La salute <input type="text" data-ans="migliorerà"> (migliorare).</div>
+            <button class="btn-correct" onclick="checkExercise('ex_1f_u2')">Correggi Esercizio 1f</button>
+            <div class="score-display"></div>
+        </div>
+    </div>
+
+    <!-- ================= UNITÀ 3 ================= -->
+    <div id="unit3" class="unit-section">
+        <h2>Unità 3 - Pronomi Combinati, Comparativi e Racconti</h2>
+        
+        <div class="exercise" id="ex_5_u3">
+            <h3>5. Completa l'e-mail con i verbi al passato prossimo.</h3>
+            <div class="line">Caro Marco, per fortuna queste maledette vacanze (1) <input type="text" data-ans="sono finite"> (finire)! È stata la settimana peggiore della mia vita! Il primo giorno (2) <input type="text" data-ans="ho fatto"> (fare) un incidente con la mia automobile. Ho dovuto chiamare un meccanico che (3) <input type="text" data-ans="è venuto"> (venire) con il carro attrezzi e così alla fine (4) <input type="text" data-ans="ho speso"> (spendere) un sacco di soldi. La sera (5) <input type="text" data-ans="sono arrivato"> (arrivare) all'hotel. Il giorno dopo (6) <input type="text" data-ans="siamo andati"> (andare) a sciare tutti insieme ma (7) <input type="text" data-ans="ho perso"> (perdere) lo zainetto. Così (8) <input type="text" data-ans="ho passato"> (io, passare) il resto della giornata alla Polizia. Il giorno dopo mia figlia e mia moglie (9) <input type="text" data-ans="sono venute"> (venire) a portarmi una copia delle chiavi e a quel punto (10) <input type="text" data-ans="siamo tornati"> (tornare) a casa tutti e tre.</div>
+            <button class="btn-correct" onclick="checkExercise('ex_5_u3')">Correggi Esercizio 5</button>
+            <div class="score-display"></div>
+        </div>
+
+        <div class="exercise" id="ex_6_u3">
+            <h3>6. Scegli la preposizione di luogo corretta.</h3>
+            <div class="line">Sono partita lunedì (1) 
+                <select class="inline-select" data-ans="da"><option>di</option><option>da</option><option>a</option></select> Dublino, dove ho preso l'aereo (2) 
+                <select class="inline-select" data-ans="per"><option>per</option><option>di</option><option>a</option></select> Milano. Sono rimasta (3) 
+                <select class="inline-select" data-ans="a"><option>in</option><option>nella</option><option>a</option></select> Milano due giorni. Poi sono andata (4) 
+                <select class="inline-select" data-ans="a"><option>in</option><option>a</option><option>per</option></select> Venezia. Da lì sono andata (5) 
+                <select class="inline-select" data-ans="in"><option>in</option><option>alla</option><option>nella</option></select> Toscana. Loro vengono (6) 
+                <select class="inline-select" data-ans="dagli"><option>da</option><option>dagli</option><option>degli</option></select> Stati Uniti e vogliono andare (7) 
+                <select class="inline-select" data-ans="in"><option>a</option><option>nell'</option><option>in</option></select> Africa, credo (8) 
+                <select class="inline-select" data-ans="in"><option>in</option><option>al</option><option>a</option></select> Kenya.
+            </div>
+            <button class="btn-correct" onclick="checkExercise('ex_6_u3')">Correggi Esercizio 6</button>
+            <div class="score-display"></div>
+        </div>
+    </div>
+
+    <!-- ================= UNITÀ 4 ================= -->
+    <div id="unit4" class="unit-section">
+        <h2>Unità 4 - Stare + Gerundio e Strutture di Luogo</h2>
+        
+        <div class="exercise" id="ex_4c_u4">
+            <h3>4c. Completa le frasi con stare + gerundio.</h3>
+            <div class="line">1. Dov'è Lucia? &bull; <input type="text" data-ans="Sta dormendo"> (dormire) in camera sua.</div>
+            <div class="line">2. Elisabetta, ma che cosa <input type="text" data-ans="stai facendo"> (fare)? &bull; <input type="text" data-ans="Sto cercando"> (cercare) gli occhiali nella borsa.</div>
+            <div class="line">3. Dove sono i tuoi bambini? &bull; <input type="text" data-ans="Stanno giocando"> (giocare), per questo c'è silenzio.</div>
+            <div class="line">4. Ragazzi, <input type="text" data-ans="state studiando"> (studiare) o <input type="text" data-ans="state giocando"> (giocare) con il cellulare? &bull; <input type="text" data-ans="Stiamo studiando">, mamma!</div>
+            <div class="line">5. Carlo <input type="text" data-ans="sta leggendo"> (leggere) un libro sul divano e Silvia <input type="text" data-ans="sta scrivendo"> (scrivere) un'e-mail.</div>
+            <button class="btn-correct" onclick="checkExercise('ex_4c_u4')">Correggi Esercizio 4c</button>
+            <div class="score-display"></div>
+        </div>
+
+        <div class="exercise" id="ex_3c_u4">
+            <h3>3c. Completa le frasi con il passato prossimo o l'imperfetto.</h3>
+            <div class="line">1. Marco <input type="text" data-ans="è arrivato"> (arrivare), mentre noi <input type="text" data-ans="pranzavamo"> (pranzare).</div>
+            <div class="line">2. Lunedì scorso Chiara <input type="text" data-ans="ha incontrato"> (incontrare) una vecchia compagna mentre <input type="text" data-ans="aspettava"> (aspettare) l'autobus.</div>
+            <div class="line">3. Quando tu <input type="text" data-ans="hai conosciuto"> (conoscere) Antonio, lui <input type="text" data-ans="aveva"> (avere) 20 anni.</div>
+            <div class="line">4. Pietro <input type="text" data-ans="è caduto"> (cadere) mentre <input type="text" data-ans="sciava"> (sciare) in montagna.</div>
+            <div class="line">5. Siccome <input type="text" data-ans="pioveva"> (piovere), domenica sera non <input type="text" data-ans="siamo usciti"> (noi, uscire).</div>
+            <button class="btn-correct" onclick="checkExercise('ex_3c_u4')">Correggi Esercizio 3c</button>
+            <div class="score-display"></div>
+        </div>
+    </div>
+
+    <!-- ================= UNITÀ 5 ================= -->
+    <div id="unit5" class="unit-section">
+        <h2>Unità 5 - Imperativo, Salute e Stati d'Animo</h2>
+        
+        <div class="exercise" id="ex_5_u5">
+            <h3>5. Scegli l'imperativo e il pronome corretti.</h3>
+            <div class="line">1. Se a Laura non è passata la febbre, 
+                <select class="inline-select" data-ans="dalle"><option>le dai</option><option>da lei</option><option>dalle</option></select> ancora una compressa ogni 8 ore.
+            </div>
+            <div class="line">2. Signora, ecco le Sue pastiglie. 
+                <select class="inline-select" data-ans="Le prenda"><option>Le prenda</option><option>Prendile</option><option>La prenda</option></select> sempre prima di mangiare.
+            </div>
+            <div class="line">3. Ecco il tuo sciroppo per la tosse. 
+                <select class="inline-select" data-ans="Prendilo"><option>Prendilo</option><option>Lo prendi</option><option>Lo prenda</option></select> tre volte al giorno.
+            </div>
+            <div class="line">4. Paolo, telefona al dottore e 
+                <select class="inline-select" data-ans="digli"><option>gli dici</option><option>digli</option><option>Le dica</option></select> che non possiamo andare.
+            </div>
+            <div class="line">5. Signor Polli, i cibi fritti fanno ingrassare! 
+                <select class="inline-select" data-ans="non mangiarli"><option>Non mangiarli</option><option>li mangi</option><option>li mangia</option></select> più se vuole dimagrire.
+            </div>
+            <div class="line">6. Devi stare attento a questa medicina: non 
+                <select class="inline-select" data-ans="prenderla"><option>prendere la</option><option>prendila</option><option>prenderla</option></select> a stomaco vuoto.
+            </div>
+            <div class="line">7. Dottore, 
+                <select class="inline-select" data-ans="mi dica"><option>dimmi</option><option>mi dici</option><option>mi dica</option></select> la verità: guarirò presto?
+            </div>
+            <button class="btn-correct" onclick="checkExercise('ex_5_u5')">Correggi Esercizio 5</button>
+            <div class="score-display"></div>
+        </div>
+
+        <div class="exercise" id="ex_6_u5">
+            <h3>6. Completa il racconto con i verbi all'imperfetto o al passato prossimo.</h3>
+            <div class="line">Da bambino ero molto vivace e (1) <input type="text" data-ans="mi facevo"> (farsi) spesso male, ma in tutta la mia vita (2) <input type="text" data-ans="sono stato"> (essere) in ospedale solo due volte. Una volta (3) <input type="text" data-ans="sono caduto"> (cadere) mentre (4) <input type="text" data-ans="andavo"> (andare) in bicicletta e (5) <input type="text" data-ans="mi sono rotto"> (rompersi) un braccio. Un'altra volta, da ragazzo, (6) <input type="text" data-ans="mi sono ammalato"> (ammalarsi) mentre (7) <input type="text" data-ans="ero"> (essere) in vacanza all'estero con i miei amici. (8) <input type="text" data-ans="Avevo"> (avere) la febbre altissima e forti dolori alla pancia e così il dottore dell'albergo mi (9) <input type="text" data-ans="ha detto"> (dire) di andare in ospedale. Così, mentre i miei amici (10) <input type="text" data-ans.="si divertivano"> (divertirsi) in spiaggia, io (11) <input type="text" data-ans="stavo"> (stare) a letto a guardare la televisione.</div>
+            <button class="btn-correct" onclick="checkExercise('ex_6_u5')">Correggi Esercizio 6</button>
+            <div class="score-display"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function switchUnit() {
+        const selectedUnit = document.getElementById('unitSelector').value;
+        const sections = document.querySelectorAll('.unit-section');
+        
+        sections.forEach((section, index) => {
+            if((index + 1).toString() === selectedUnit) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+    }
+
+    function checkExercise(exerciseId) {
+        const container = document.getElementById(exerciseId);
+        const inputs = container.querySelectorAll('input[type="text"], select.inline-select');
+        let correctCount = 0;
+        let totalCount = inputs.length;
+
+        inputs.forEach(input => {
+            // Eliminar marcas previas si existen
+            const nextSibling = input.nextSibling;
+            if (nextSibling && nextSibling.className && nextSibling.className.includes('result-mark')) {
+                nextSibling.remove();
+            }
+
+            const userAnswer = input.value.trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+            const correctAnswer = input.getAttribute('data-ans').trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+
+            const mark = document.createElement('span');
+            mark.className = 'result-mark';
+
+            if (userAnswer === correctAnswer) {
+                mark.innerHTML = '&#10004;';
+                mark.classList.add('correct');
+                correctCount++;
+            } else {
+                mark.innerHTML = '&#10008; (Sol: ' + input.getAttribute('data-ans') + ')';
+                mark.classList.add('incorrect');
+            }
+            input.parentNode.insertBefore(mark, input.nextSibling);
+        });
+
+        const scoreDisplay = container.querySelector('.score-display');
+        scoreDisplay.innerHTML = "Punteggio: " + correctCount + " / " + totalCount;
+    }
+</script>
+
+</body>
+</html>
